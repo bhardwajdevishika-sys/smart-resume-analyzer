@@ -1,75 +1,422 @@
-{% extends "base.html" %} {% block content %}
-<div class="container">
-  <div class="hero-section">
-    <h1>AI Resume Analyzer</h1>
-    <p class="intro-text">
-      Get your <strong>ATS Compatibility Score</strong> and AI-powered feedback
-      to improve your chances of landing your dream job.
-    </p>
+{% extends "base.html" %}
 
-    <!-- Feature highlights -->
-    <div class="feature-highlights">
-      <div class="feature-item">
-        <div class="feature-icon">🎯</div>
-        <h3>ATS Score</h3>
-        <p>Get 0-100 compatibility rating</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">📊</div>
-        <h3>Detailed Breakdown</h3>
-        <p>5-category analysis with insights</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🚀</div>
-        <h3>Actionable Tips</h3>
-        <p>Specific improvement suggestions</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🤖</div>
-        <h3>AI-Powered</h3>
-        <p>Advanced OpenAI analysis</p>
-      </div>
+{% block title %}
+ResumeIQ — AI Resume Analyzer
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-shell">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="features">
+
+        <div class="hero-copy">
+
+            <div class="eyebrow">
+
+                <span class="pulse-dot"></span>
+
+                AI-powered career intelligence
+
+            </div>
+
+
+            <h1>
+
+                Turn your resume into a
+
+                <span>stronger application.</span>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Upload your resume and get an ATS score,
+                section-by-section feedback, and practical
+                improvements in seconds.
+
+            </p>
+
+
+            <div class="hero-pills">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure processing
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-bolt"></i>
+                    Instant insights
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-file-pdf"></i>
+                    PDF supported
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="floating-card card-score">
+
+                <span>ATS SCORE</span>
+
+                <strong>92</strong>
+
+                <small>/100</small>
+
+                <div class="mini-progress">
+
+                    <i style="width:92%"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="resume-orb">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span></span>
+
+            </div>
+
+
+            <div class="floating-card card-ai">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <div>
+
+                    <strong>AI insights</strong>
+
+                    <small>
+                        Ready to improve
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= UPLOAD ================= -->
+
+    <section class="upload-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    01 / ANALYZE
+                </span>
+
+                <h2>
+                    Upload your resume
+                </h2>
+
+                <p>
+                    We'll scan the structure, skills,
+                    experience and ATS readiness.
+                </p>
+
+            </div>
+
+
+            <div class="file-badge">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Private
+
+            </div>
+
+        </div>
+
+
+
+        <form
+            id="uploadForm"
+            enctype="multipart/form-data"
+        >
+
+
+            <!-- DROP ZONE -->
+
+            <div
+                class="upload-area"
+                id="uploadArea"
+            >
+
+                <input
+                    type="file"
+                    name="resume"
+                    id="fileInput"
+                    accept=".pdf"
+                    required
+                >
+
+
+                <div class="upload-visual">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+
+                <div class="upload-copy">
+
+                    <strong id="uploadTitle">
+
+                        Drop your PDF here
+
+                    </strong>
+
+
+                    <span id="uploadHint">
+
+                        or click to browse from your computer
+
+                    </span>
+
+
+                    <small>
+
+                        PDF only · maximum 10 MB
+
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SELECTED FILE -->
+
+            <div
+                class="selected-file"
+                id="selectedFile"
+            >
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+
+                <div>
+
+                    <strong id="fileName">
+                        resume.pdf
+                    </strong>
+
+                    <span id="fileSize"></span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="removeFile"
+                    aria-label="Remove file"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ANALYZE BUTTON -->
+
+            <button
+                type="submit"
+                class="analyze-btn"
+            >
+
+                <span>
+                    Analyze my resume
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section
+        class="steps"
+        id="how-it-works"
+    >
+
+
+        <div class="step">
+
+            <span>01</span>
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <div>
+
+                <strong>
+                    Upload
+                </strong>
+
+                <small>
+                    Add your latest PDF resume.
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <span>02</span>
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <div>
+
+                <strong>
+                    Analyze
+                </strong>
+
+                <small>
+                    AI reviews your resume structure.
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <span>03</span>
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            <div>
+
+                <strong>
+                    Improve
+                </strong>
+
+                <small>
+                    Get focused recommendations.
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= LOADING ================= -->
+
+    <div
+        id="loading"
+        class="loading"
+    >
+
+        <div class="loading-card">
+
+
+            <div class="loader-ring"></div>
+
+
+            <span class="section-kicker">
+
+                AI ANALYSIS IN PROGRESS
+
+            </span>
+
+
+            <h3>
+
+                Reading your resume...
+
+            </h3>
+
+
+            <p id="loadingMessage">
+
+                Extracting content and preparing
+                your insights.
+
+            </p>
+
+
+            <div class="analysis-steps">
+
+                <span class="active">
+                    Extract
+                </span>
+
+                <span>
+                    Analyze
+                </span>
+
+                <span>
+                    Score
+                </span>
+
+            </div>
+
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="upload-section">
-    <h2>Upload Your Resume</h2>
-    <p class="upload-subtitle">
-      PDF format • Secure processing • Instant results
-    </p>
 
-    <form id="uploadForm" enctype="multipart/form-data">
-      <div class="upload-area">
-        <div class="upload-icon">📄</div>
-        <input
-          type="file"
-          name="resume"
-          accept=".pdf"
-          required
-          id="fileInput"
-        />
-        <label for="fileInput" class="upload-label">
-          <span class="upload-text">Choose PDF file or drag & drop</span>
-          <span class="upload-size">Max size: 10MB</span>
-        </label>
-      </div>
-      <button type="submit" class="analyze-btn">
-        <span class="btn-icon">🔍</span>
-        Analyze Resume
-      </button>
-    </form>
-  </div>
 
-  <div id="loading" class="loading">
-    <div class="loading-content">
-      <i class="fas fa-circle-notch"></i>
-      <p>Analyzing your resume...</p>
-      <small>This might take a moment while our AI reviews your content</small>
-    </div>
-  </div>
+    <!-- ================= RESULTS ================= -->
 
-  <div id="results"></div>
+    <section id="results"></section>
+
+
 </div>
 
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+<!-- Main JavaScript -->
+
+<script
+    src="{{ url_for('static', filename='js/scripts.js') }}"
+></script>
+
+
 {% endblock %}
