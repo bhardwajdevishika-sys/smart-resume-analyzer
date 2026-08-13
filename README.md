@@ -6,6 +6,25 @@
 ![Gemini](https://img.shields.io/badge/Gemini-AI%20Powered-blue)
 ![Responsive](https://img.shields.io/badge/Design-Responsive-orange)
 
+## 📸 Project Preview
+
+### Dashboard
+
+<p align="center">
+  <img src="assets/dashboard.png" alt="Smart Resume Analyzer Dashboard" width="900">
+</p>
+
+### ATS Score & Analysis
+
+<p align="center">
+  <img src="assets/ats-score.png" alt="ATS Score Analysis" width="900">
+</p>
+
+### AI Recommendations
+
+<p align="center">
+  <img src="assets/recommendations.png" alt="AI Resume Recommendations" width="900">
+</p>
 # AI-Powered Resume Analyzer with ATS Scoring
 
 A sophisticated web application that uses AI to analyze resumes and provide **ATS (Applicant Tracking System) compatibility scores**, detailed feedback, strengths, and actionable suggestions to help job seekers improve their resumes.
