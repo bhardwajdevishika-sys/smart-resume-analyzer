@@ -5,6 +5,11 @@
 ![Flask](https://img.shields.io/badge/Flask-3.0.2-red)
 ![Gemini](https://img.shields.io/badge/Gemini-AI%20Powered-blue)
 ![Responsive](https://img.shields.io/badge/Design-Responsive-orange)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini API" />
+</p>
 
 ## 📸 Project Preview
 
@@ -378,7 +383,15 @@ If you would like to contribute:
 4. Commit your changes
 5. Create a Pull Request
 
+
 ---
+## Features
+
+- Resume parsing and information extraction
+- Job description analysis
+- ATS-style match score
+- Missing keyword identification
+- Resume improvement recommendations
 
 ## 👨‍💻 Author
 
