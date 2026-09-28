@@ -393,6 +393,14 @@ If you would like to contribute:
 - Missing keyword identification
 - Resume improvement recommendations
 
+## Tech Stack
+
+- **Python** – Core application backend
+- **Flask** – Lightweight web framework for handling routes and requests
+- **PDFMiner** – Accurate text extraction from uploaded resume PDFs
+- **Google Gemini API** – Semantic resume parsing and ATS recommendations
+- **HTML / CSS** – Responsive user interface
+- 
 ## 👨‍💻 Author
 
 **Devishika Bhardwaj**
